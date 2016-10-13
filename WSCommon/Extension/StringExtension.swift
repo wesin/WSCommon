@@ -40,11 +40,11 @@ extension String {
         return self.substring(with: start..<end)
     }
     
-    subscript(index:Int) -> String {
+    public subscript(index:Int) -> String {
         return String(self[self.characters.index(self.startIndex, offsetBy: index)])
     }
     
-    subscript(range:Range<Int>) -> String {
+    public subscript(range:Range<Int>) -> String {
         let start = self.characters.index(self.startIndex, offsetBy: range.lowerBound)
         let end = self.characters.index(self.startIndex, offsetBy: range.upperBound)
         return self[start..<end]

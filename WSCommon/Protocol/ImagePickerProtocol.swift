@@ -14,7 +14,7 @@ protocol ImagePickerProtocol {
 
 extension ImagePickerProtocol {
     
-    func pickerImage<VC:UIViewController>(isCamera:Bool,  vct:VC, from rect:CGRect) where VC: UIImagePickerControllerDelegate, VC: UINavigationControllerDelegate {
+    public func pickerImage<VC:UIViewController>(isCamera:Bool,  vct:VC, from rect:CGRect) where VC: UIImagePickerControllerDelegate, VC: UINavigationControllerDelegate {
         func selectPhoto(isCamera:Bool) {
             let imageVC = UIImagePickerController()
             imageVC.delegate = vct

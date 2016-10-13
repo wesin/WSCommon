@@ -11,44 +11,26 @@ import AVFoundation
 import Photos
 //import "sys/utsname.h"
 
-class SystemInfo {
+open class SystemInfo {
     
-    static func getVersion() -> String {
+    open static func getVersion() -> String {
         let infoDic = Bundle.main.infoDictionary!
         return infoDic["CFBundleShortVersionString"]! as! String
     }
     
-    static func getIosVersion() -> String {
+    open static func getIosVersion() -> String {
         return UIDevice.current.systemVersion
     }
     
-    static func getPhoneMode() -> String {
-        let model = OCCommonFunc.getMachineVersion()
-//        print(model)
-        return model!
-//        return UIDevice.currentDevice().model
-    }
-    
-    static func getUniqueID() -> String {
+    open static func getUniqueID() -> String {
         return UIDevice.current.identifierForVendor!.uuidString
-    }
-    
-    
-    static func getSystemInfo() -> [String:String] {
-        var infoDic = [String:String]()
-        infoDic["appversion"] = getVersion()
-        infoDic["device"] = getUniqueID()
-        infoDic["model"] = getPhoneMode()
-        infoDic["type"] =  "IOS"
-        infoDic["version"] = getIosVersion()
-        return infoDic
     }
     
     //Privacy
     /// 相机访问权限
     ///
     /// - Returns: <#return value description#>
-    static func cameraPrivacy() -> Bool {
+    open static func cameraPrivacy() -> Bool {
         if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             return false
         }
@@ -60,7 +42,7 @@ class SystemInfo {
     /// 申请相机权限
     ///
     /// - Parameter handle: <#handle description#>
-    static func requestCameraPrivacy(handle:@escaping (Bool) -> Void) {
+    open static func requestCameraPrivacy(handle:@escaping (Bool) -> Void) {
         if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             handle(false)
             return
@@ -76,7 +58,7 @@ class SystemInfo {
     /// 获取相册权限
     ///
     /// - Returns: <#return value description#>
-    static func photoPrivacy() -> Bool {
+    open static func photoPrivacy() -> Bool {
         if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             return false
         }
@@ -87,7 +69,7 @@ class SystemInfo {
     /// 申请相册权限
     ///
     /// - Parameter handle: <#handle description#>
-    static func requestPhotoPrivacy(handle:@escaping (Bool) -> Void) {
+    open static func requestPhotoPrivacy(handle:@escaping (Bool) -> Void) {
         if photoPrivacy() {
             handle(true)
             return

@@ -10,7 +10,7 @@ import Foundation
 
 extension Array {
     
-    func find(_ fn: (Element) -> Bool) -> Int {
+    public func find(_ fn: (Element) -> Bool) -> Int {
         for (index,x) in self.enumerated() {
             if fn(x) {
                 return index
@@ -19,7 +19,7 @@ extension Array {
         return -1
     }
     
-    func findElement(_ fn:(Element) -> Bool) -> Element? {
+    public func findElement(_ fn:(Element) -> Bool) -> Element? {
         for x in self {
             if fn(x) {
                 return x
@@ -57,7 +57,7 @@ extension Array where Element:Equatable {
      
      - returns: 新数组
      */
-    func interSection<S : Sequence>(_ otherArr:S) -> [Element] where S.Iterator.Element == _Buffer.Element {
+    public func interSection<S : Sequence>(_ otherArr:S) -> [Element] where S.Iterator.Element == _Buffer.Element {
         var newArr = [Element]()
         for item in otherArr {
             if self.contains(item) {

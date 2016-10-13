@@ -18,7 +18,7 @@ extension Int {
      
      - returns: byte数组， Data可以从byte生成
      */
-    func getBytes(_ length:Int) -> [UInt8]? {
+    public func getBytes(_ length:Int) -> [UInt8]? {
         if length >= 8 {
             return nil
         }

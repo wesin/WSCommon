@@ -15,7 +15,7 @@ extension Data {
     ///
     /// - Parameter range: data.intValue(in: 0..<4)
     /// - Returns: int值
-    func intValue(in range:Range<Data.Index>) -> Int {
+    public func intValue(in range:Range<Data.Index>) -> Int {
         let data = self.subdata(in: range)
         var value:Int = 0
         for index in 1...data.indices.count {

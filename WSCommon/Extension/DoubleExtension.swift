@@ -14,7 +14,7 @@ extension Double {
     ///
     /// - Parameter digit: 几位小数
     /// - Returns: 99999999.65356767.rounded(digit: 2)
-    func rounded(digit:Int) -> Double {
+    public func rounded(digit:Int) -> Double {
         return  (self * pow(Double(10), Double(digit))).rounded() / pow(Double(10), Double(digit))
     }
     
@@ -23,7 +23,7 @@ extension Double {
     ///
     /// - Parameter digit: 几位小数
     /// - Returns: string
-    func formatRounded(digit:Int) -> String {
+    public func formatRounded(digit:Int) -> String {
         return String(format: "%\(digit)f", rounded(digit: digit))
     }
 
