@@ -17,6 +17,7 @@
 		0A5B8C421DAF341E00BAB348 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B8C381DAF341E00BAB348 /* StringExtension.swift */; };
 		0A5B8C431DAF341E00BAB348 /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B8C391DAF341E00BAB348 /* UISearchBarExtension.swift */; };
 		0A5B8C441DAF341E00BAB348 /* ImagePickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B8C3B1DAF341E00BAB348 /* ImagePickerProtocol.swift */; };
+		0AF5C2671DB46152004C5C22 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5C2661DB46152004C5C22 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0A5B8C381DAF341E00BAB348 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		0A5B8C391DAF341E00BAB348 /* UISearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
 		0A5B8C3B1DAF341E00BAB348 /* ImagePickerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerProtocol.swift; sourceTree = "<group>"; };
+		0AF5C2661DB46152004C5C22 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		0A5B8C331DAF341E00BAB348 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0AF5C2661DB46152004C5C22 /* DateExtension.swift */,
 				0A5B8C341DAF341E00BAB348 /* ArrayExtension.swift */,
 				0A5B8C351DAF341E00BAB348 /* DataExtension.swift */,
 				0A5B8C361DAF341E00BAB348 /* DoubleExtension.swift */,
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5B8C401DAF341E00BAB348 /* DoubleExtension.swift in Sources */,
+				0AF5C2671DB46152004C5C22 /* DateExtension.swift in Sources */,
 				0A5B8C421DAF341E00BAB348 /* StringExtension.swift in Sources */,
 				0A5B8C3E1DAF341E00BAB348 /* ArrayExtension.swift in Sources */,
 				0A5B8C431DAF341E00BAB348 /* UISearchBarExtension.swift in Sources */,

@@ -52,7 +52,7 @@ extension String {
     
     func cloneSelf(_ times:Int) -> String {
         if times <= 0 {
-            return ""
+            return self
         }
         let str = self
         var result = str
